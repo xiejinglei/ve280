@@ -166,7 +166,7 @@ void NpcFire(IAttackPlayer* t) {
 \subsection{Your Linux Operating System}
 \begin{frame}{Linux as a operating system \textit{kernel}}
 \begin{block}{Operating systems as a resource manager}
-	Operating systems manages your hardware. These includes computation resource (CPU, GPU), storage (Hard drive), communication resource (network)...
+	Operating systems manage your hardware. These include computation resource (CPU, GPU), storage (Hard drive), communication resource (network)...
 \end{block}
 \begin{block}{The core of OS, a.k.a. \textit{kernel}}
 	At the very heart of the OS there lies the kernel. This piece of software talks directly to the hardware. It provides a unified way of accessing your storage devices (Filesystems), graphic devices, network...
@@ -236,9 +236,9 @@ void NpcFire(IAttackPlayer* t) {
 \begin{minted}[fontsize=\footnotesize]{text}
 We trust you have received the usual lecture from the local 
 System Administrator. It usually boils down to these three things:
-	#1) Respect the privacy of others.
-	#2) Think before you type.
-	#3) With great power comes great responsibility.
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
 root's password:
 \end{minted}
 \end{frame}
@@ -346,13 +346,33 @@ Conventions are:\\
 			\item[-l] Use \textbf{l}ong format. Each line for a single file. 
 		\end{description}
 		\item[mkdir] \textbf{M}a\textbf{k}e \textbf{dir}ectory, self-explanatory.
-		\item[rm] \textbf{R}e\textbf{m}ove files / directory. It is \textbf{extremely dangerous} to run \texttt{rm} with administrative privilege! See the bumblebee accident. \small{https://github.com/MrMEEE/bumblebee-Old-and-abbandoned/issues/123}
+		\item[rm] \textbf{R}e\textbf{m}ove files / directory. It is \textbf{extremely dangerous} to run \texttt{rm} with administrative privilege! See the bumblebee accident. \url{https://github.com/MrMEEE/bumblebee-Old-and-abbandoned/issues/123}
 		\begin{description}[-a]
 			\small
 			\item[-r] Deletes files/folders recursively. Folders requires this option.
 			\item[-f] Force remove. Ignores warnings.  
 		\end{description}
-		\item[rmdir] \textbf{R}e\textbf{m}ove \textbf{dir}ectory, only \textbf{empty} ones can be removed this way.
+		\item[rmdir] \textbf{R}e\textbf{m}ove \textbf{dir}ectory, only \textbf{empty} ones can be removed.
+	\end{description}
+
+\end{frame}
+
+\begin{frame}{Aspects of Linux: Shell}
+\framesubtitle{Long Format of File Information}
+	\begin{figure}
+		\vspace{-0.1in}
+		\centering
+		\includegraphics[scale=0.3]{fig/rc2_longformat}
+	\end{figure}
+	\begin{description}[File permission]
+		\item[File permission]
+		\begin{itemize}
+			\small
+			\item First character: `-’ regular file; `d’ directory 
+			\item read, write, execution permission of the owner 
+			\item read, write, execution permission of the group 
+			\item read, write, execution permission of everyone else
+		\end{itemize}
 	\end{description}
 
 \end{frame}
