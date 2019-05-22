@@ -197,14 +197,11 @@ void NpcFire(IAttackPlayer* t) {
 \begin{block}{Open SUSE}
 	Maintained by german company SUSE. Focus on stability. 
 \end{block}
-\begin{block}{Arch Linux}
-	ROLLING UPDATE! Absolutely cutting edge. Great community and wiki. User is assumed to be experienced. Installation is done on command line. Package management system is \textit{pacman}.
+\begin{block}{Arch Linux / Manjaro}
+	ROLLING UPDATE! Absolutely cutting edge. Great community and wiki. User is assumed to be experienced. Installation of Arch Linux is done on command line while Manjaro makes easier. Package management system is \textit{pacman}.
 \end{block}
-\begin{block}{Linux From Scratch}
-	Try this if you are absolutely interested in figuring out how everything works.
-\end{block}
-\begin{block}{Gentoo}
-	Think LFS is crazy enough? Well this things compiles every piece of software you use FROM THE SOURCE! 
+\begin{block}{Linux From Scratch (LFS) / Gentoo}
+	Try LFS if you are absolutely interested in figuring out how everything works. Think LFS is crazy enough? Well Gentoo compiles every piece of software you use FROM THE SOURCE! 
 \end{block}
 \end{frame}
 
@@ -216,6 +213,15 @@ void NpcFire(IAttackPlayer* t) {
 	This year Microsoft actually release one. Installation guide is available \href{https://msdn.microsoft.com/zh-cn/commandline/wsl/install\_guide}{here(click me)}.
 	
 	This solution is easy to use, clean. It saves you time copying files back and forth from the virtual machine. You can simply develop in Windows using your favorite tool (IDE and test it easily under ``Linux''. It's a good solution for the purpose of this course.
+\end{block}
+\end{frame}
+
+\begin{frame}{Virtual Machines vs. Containers}
+\begin{block}{Virtual Machines}
+	A virtual machine (VM) is an emulation of a computer system. Virtual machines are based on computer architectures and provide functionality of a physical computer. The CPUs, memory, kernel, file systems and devices are all virtualized and need translation, which makes it slower than a physical computer.
+\end{block}
+\begin{block}{Containers}
+	A container shares the CPUs, memory, kernel, file systems and devices with the host machine, which makes it almost as fast as the host machine when executing machine code (no virtualization means no translation of machine code). Everything in a container is something mapped from the host system. \structure{Docker} is a lighweighted, standalone and secure container daemon which is very popular nowadays.
 \end{block}
 \end{frame}
 
@@ -357,25 +363,6 @@ Conventions are:\\
 
 \end{frame}
 
-\begin{frame}{Aspects of Linux: Shell}
-\framesubtitle{Long Format of File Information}
-	\begin{figure}
-		\vspace{-0.1in}
-		\centering
-		\includegraphics[scale=0.3]{fig/rc2_longformat}
-	\end{figure}
-	\begin{description}[File permission]
-		\item[File permission]
-		\begin{itemize}
-			\small
-			\item First character: `-’ regular file; `d’ directory 
-			\item read, write, execution permission of the owner 
-			\item read, write, execution permission of the group 
-			\item read, write, execution permission of everyone else
-		\end{itemize}
-	\end{description}
-
-\end{frame}
 
 \begin{frame}{Aspects of Linux: Shell}
 \framesubtitle{Useful commands, Cont'd}
@@ -387,9 +374,53 @@ Conventions are:\\
 		\item[-r] Copy files/folders recursively. Folders requires this option.  
 	\end{description}
 	\item[mv] \textbf{M}o\textbf{v}e files / directory. Takes 2 arguments \texttt{source} and \texttt{dest}. If \texttt{source} and \texttt{dest} is the same location, this command essentially does a rename. Pay attention to the situation where both arguments are already existed.
-	\item[cat]<2-> Con\textbf{cat}enate files. Takes multiple arguments and print their content one by one to \texttt{stdout}. When there is just one argument, it essentially displays the content.
+	\item[cat] Con\textbf{cat}enate files. Takes multiple arguments and print their content one by one to \texttt{stdout}. When there is just one argument, it essentially displays the content.
 \end{description}
 \end{frame}
+
+
+\begin{frame}{Aspects of Linux: Shell}
+\framesubtitle{Long Format of File Information}
+	\begin{figure}
+		\vspace{-0.1in}
+		\centering
+		\includegraphics[width=0.8\linewidth]{fig/rc2_longformat}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Aspects of Linux: Shell}
+\framesubtitle{Long Format of File Information, Cont'd}
+	\begin{description}[File permission]
+		\item[File permission]
+		\begin{itemize}
+			\small
+			\item first character: `-’ regular file; `d’ directory 
+			\item read, write, execution permission of the owner 
+			\item read, write, execution permission of the group 
+			\item read, write, execution permission of everyone else
+			\item last character: `-’ regular file; `x’ executable 
+		\end{itemize}
+		\item[Link]
+		\begin{itemize}
+			\small
+			\item the number of hard links of the file
+			\item a regular file has only one hard link (of itself)
+			\item a directory has $2+n$ hard links where $n$ is the number of its subdirectories because there are two extra links to \structure{.} and \structure{..}
+		\end{itemize}
+		\item[Owner/Group]
+		\begin{itemize}
+			\small
+			\item act with file permissions
+		\end{itemize}
+		\item[File Size] 
+		\begin{itemize}
+			\small
+			\item in bytes
+		\end{itemize}
+	\end{description}
+
+\end{frame}
+
 
 \begin{frame}{Aspects of Linux: Shell}
 \framesubtitle{CLI Utilities}
