@@ -80,7 +80,7 @@ A number of the form **2<sup>n</sup>** is called *Apocalyptic* if its digits con
 
 182687704<u>**666**</u>362864775460604089535377456991567872​
 
-A number **n** such that **2<sup>n</sup>**​ is apocalyptic is called *Apocalyptic power* or *Apocalyptic exponent*.
+A number **n** such that **2<sup>n</sup>** is apocalyptic is called *Apocalyptic power* or *Apocalyptic exponent*.
 
 ### Input:
 
