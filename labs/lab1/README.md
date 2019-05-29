@@ -42,11 +42,13 @@ If **n** is Jordan-Polya, print **1**. Otherwise, print **0**. The newline chara
 
 
 
-## 3. Polite numbers
+## 3. Alternating numbers
 
-A number is said *polite* if it can be expressed as the sum of at least two consecutive non-zero natural numbers.
+A number is said *alternating* in base **b** if in its representation odd and even digits alternate.
 
-For example, **12=3+4+5, 666=1+2+...+36**. It's not hard to know that triangular numbers except **1** are polite numbers (**1=0+1** is not allowed here)
+For example in base 10, **1, 2, 989, 1234543210...** are alternating numbers.
+
+In base 2, **1, 101, 10101**  are alternating numbers.
 
 ### Input:
 
@@ -54,7 +56,7 @@ A single integer **n** where **1<=n<=2<sup>31</sup>-1**. The input integer is gu
 
 ### Output:
 
-If **n** is polite, print **1**. Otherwise, print **0**. The newline character does not affect the result.
+If **n** is alternating, print **1**. Otherwise, print **0**. The newline character does not affect the result.
 
 
 
@@ -102,7 +104,7 @@ It's not hard to observe that the numbers we are dealing with exceed the range o
 
 [2] Jordan-Polya numbers http://www.numbersaplenty.com/set/Jordan-Polya_number/
 
-[3] Polite and impolite numbers http://www.numbersaplenty.com/set/impolite_number/
+[3] Alternating numbers http://www.numbersaplenty.com/set/alternating_number/
 
 [4] Duffinian numbers http://www.numbersaplenty.com/set/Duffinian_number/
 
