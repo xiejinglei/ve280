@@ -48,7 +48,7 @@ A number is said *alternating* in base **b** if in its representation odd and ev
 
 For example in base 10, **1, 2, 989, 1234543210...** are alternating numbers.
 
-In base 2, **1, 101, 10101**  are alternating numbers.
+In base 2, **1, 10, 101, 10101...**  are alternating numbers.
 
 ### Input:
 
