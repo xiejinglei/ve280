@@ -1,6 +1,6 @@
 # Lab One: Integers!
 
-## Description
+## Introduction
 
 ### 1. Magnanimous number
 
@@ -106,15 +106,63 @@
     It's not hard to observe that the numbers we are dealing with exceed the range of `int` or even `long long int` type in C/C++. Therefore, the key point here is to store such a big number using C/C++.
 
 
+## Implementation
+
+For the RC section on May 30, you need to complete `magnanimous.cpp` and `jordan_polya.cpp`. For the RC section on May 31, you need to complete `alternating.cpp` and `duffinian.cpp`. 
+
+The function declaration is provided for each kind of number. For example, you need to implement `is_magnanimous()` in `magnanimous.cpp` to check magnanimous numbers. 
+
+```
+bool is_magnanimous(int num) {
+	// Your implementation here
+    return false;  // Return a Boolean type
+}
+```
+
+If time permits, you should also design your own test cases in `test_magnanimous()` with assertions. Several sample cases are shown below:
+
+```
+void test_magnanimous() {
+    assert(!is_magnanimous(15));  // 15 is not a magnanimous number
+    assert(is_magnanimous(11));  // 11 is a magnanimous number
+    assert(!is_magnanimous(100));  // 100 is not a magnanimous number
+    cout << "Magnanimous number tests passed!" << endl;
+}
+```
+
+## Compilation
+
+You can utilize the `Makefile` to compile:
+
+```
+make
+```
+
+or type the following command:
+
+```
+g++ -Wall -o lab1 lab1.cpp magnanimous.cpp jordan_polya.cpp alternating.cpp duffinian.cpp
+```
+
+Then you can run the executable:
+
+```
+./lab1
+```
+
+
+## Submission
+Please make a fork of the VE280 GitHub repository at <https://github.com/ve280/ve280>, then commit your updates to the files in `labs/lab1` and create a pull request. You can refer to this [tutorial](https://github.com/ve280/tutorials/blob/master/github_introduction.md#4-contribute-to-a-public-repository) on how to create pull requests.
+
 
 ## Reference
 
-[1] Magnanimous numbers http://www.numbersaplenty.com/set/magnanimous_number/
+[1] Magnanimous numbers <http://www.numbersaplenty.com/set/magnanimous_number/>
 
-[2] Jordan-Polya numbers http://www.numbersaplenty.com/set/Jordan-Polya_number/
+[2] Jordan-Polya numbers <http://www.numbersaplenty.com/set/Jordan-Polya_number/>
 
-[3] Alternating numbers http://www.numbersaplenty.com/set/alternating_number/
+[3] Alternating numbers <http://www.numbersaplenty.com/set/alternating_number/>
 
-[4] Duffinian numbers http://www.numbersaplenty.com/set/Duffinian_number/
+[4] Duffinian numbers <http://www.numbersaplenty.com/set/Duffinian_number/>
 
-[5] Apocalyptic numbers http://www.numbersaplenty.com/set/apocalyptic_number/
+[5] Apocalyptic numbers <http://www.numbersaplenty.com/set/apocalyptic_number/>
