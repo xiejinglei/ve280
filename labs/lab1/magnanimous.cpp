@@ -1,47 +1,26 @@
 #include <iostream>
 #include <cassert>
-
+#include <cmath>
+#include <string>
 using namespace std;
-
-bool is_prime(int num) {
-    if (num < 2) {
-        return false;
-    }
-    if (num == 2) {
-        return true;
-    }
-    for (int i = 2; i * i <= num; i++) {
-        if (num % i == 0) {
-            return false;
-        }
+bool is_prime(int num){
+    for (int i=2;i<=num/3;i++){
+        if (num%i==0){ return false;}
     }
     return true;
 }
-
 bool is_magnanimous(int num) {
-    int num1=num,dig=0;
-    while (num1>0){dig++;num1=num1/10;}
-    // dig is the num of digits
-    int divisor = 10;
-    for (int i=1;i<dig;i++){
-        cout << divisor << endl;
-        int a=0,b=0;
-        num1=num;
-        a = num1/divisor;
-        b = num1%divisor;
-        int sum=a+b;
-        if (!is_prime(sum))
-            return false;
-        divisor *= 10;
+    for (int i=1;i<to_string(num).length();i++){
+        if (!is_prime(num/(int)pow(10,i)+num%(int)pow(10,i)))return false;
     }
     return true;
 }
-
-
-
 
 void test_magnanimous() {
     assert(!is_magnanimous(15));  // 15 is not a magnanimous number
+    assert(is_magnanimous(16));
+    //assert(is_magnanimous(356));
+    assert(!is_magnanimous(128));
     // TODO: Add more test cases
     cout << "Magnanimous number tests passed!" << endl;
 }
