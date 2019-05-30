@@ -3,6 +3,21 @@
 
 using namespace std;
 
+bool is_prime(int num) {
+    if (num < 2) {
+        return false;
+    }
+    if (num == 2) {
+        return true;
+    }
+    for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
 bool is_magnanimous(int num) {
     int num1=num,dig=0;
     while (num1>0){dig++;num1=num1/10;}
