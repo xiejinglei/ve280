@@ -1,6 +1,7 @@
 # Irrelevant files in development environment
 .idea/
 .vscode/
+*.xcodeproj/
 .DS_Store
 CMakeLists.txt
 cmake-build-debug/
