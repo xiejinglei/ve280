@@ -6,14 +6,18 @@ using namespace std;
 bool is_magnanimous(int num) {
     int num1=num,dig=0;
     while (num1>0){dig++;num1=num1/10;}
+    // dig is the num of digits
+    int divisor = 10;
     for (int i=1;i<dig;i++){
-        int a=0,b=0,num1=num,c=1;
-        for (int j=1;j<=i;j++){a+=c*(num1%10);c=c*10;num1=num1/10;}
-        c=1;
-        for (int j=1;j<=dig-i;j++){b+=c*(num1%10);c=c*10;num1=num1/10;}
+        cout << divisor << endl;
+        int a=0,b=0;
+        num1=num;
+        a = num1/divisor;
+        b = num1%divisor;
         int sum=a+b;
-        for (int j=2;j<=floor(sqrt(sum));j++)
-            if (sum%j==0) return false;
+        if (!is_prime(sum))
+            return false;
+        divisor *= 10;
     }
     return true;
 }
