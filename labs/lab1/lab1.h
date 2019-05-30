@@ -9,7 +9,7 @@ bool is_jordan_polya(int num);
 
 void test_jordan_polya();
 
-bool is_alternating(int num);
+bool is_alternating(int num, int base);
 
 void test_alternating();
 
