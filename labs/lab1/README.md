@@ -110,16 +110,16 @@
 
 For the RC section on May 30, you need to complete `magnanimous.cpp` and `jordan_polya.cpp`. For the RC section on May 31, you need to complete `alternating.cpp` and `duffinian.cpp`. 
 
-The function declaration is provided for each kind of number. For example, you need to implement `is_magnanimous()` in `magnanimous.cpp` to check magnanimous numbers. 
+The function declarations are provided for each kind of number. For example, you need to implement `is_magnanimous()` in `magnanimous.cpp` to check magnanimous numbers. 
 
 ```
 bool is_magnanimous(int num) {
-	// Your implementation here
+    // Your implementation here
     return false;  // Return a Boolean type
 }
 ```
 
-If time permits, you should also design your own test cases in `test_magnanimous()` with assertions. Several sample cases are shown below:
+If time permits, you should also design your own test cases in `test_magnanimous()` with assertions. Here are several sample cases:
 
 ```
 void test_magnanimous() {
@@ -157,12 +157,12 @@ Please make a fork of the VE280 GitHub repository at <https://github.com/ve280/v
 
 ## Reference
 
-[1] Magnanimous numbers <http://www.numbersaplenty.com/set/magnanimous_number/>
+[1] Magnanimous numbers. <http://www.numbersaplenty.com/set/magnanimous_number/>.
 
-[2] Jordan-Polya numbers <http://www.numbersaplenty.com/set/Jordan-Polya_number/>
+[2] Jordan-Polya numbers. <http://www.numbersaplenty.com/set/Jordan-Polya_number/>.
 
-[3] Alternating numbers <http://www.numbersaplenty.com/set/alternating_number/>
+[3] Alternating numbers. <http://www.numbersaplenty.com/set/alternating_number/>.
 
-[4] Duffinian numbers <http://www.numbersaplenty.com/set/Duffinian_number/>
+[4] Duffinian numbers. <http://www.numbersaplenty.com/set/Duffinian_number/>.
 
-[5] Apocalyptic numbers <http://www.numbersaplenty.com/set/apocalyptic_number/>
+[5] Apocalyptic numbers. <http://www.numbersaplenty.com/set/apocalyptic_number/>.
