@@ -1,100 +1,109 @@
-# Lab I
+# Lab One: Integers!
 
-## 1. Magnanimous numbers
+## Description
 
-A number (which we assume of **at least 2 digits**) such that the sum obtained inserting a "+" among its digit in any position gives a prime.
+### 1. Magnanimous number
 
-For example, 4001 is *magnanimous* because the numbers
+  - **Definition:**
+  
+  A number with at least 2 digits such that the sum obtained inserting a "+" among its digit in any position gives a prime.
 
-- 4+001=5
+  For example, 1316 is *magnanimous* because the numbers
 
-- 40+01=41
-
-- 400+1=401
+    - 1 + 316 = 317
+	
+    - 13 + 16 = 29
+	
+    - 131 + 6 = 137
 
   are all prime numbers.
 
-### Input:
+  - **Input:**
 
-A single integer **n** where **10<=n<=2<sup>31</sup>-1**. The input integer is guaranteed to be a valid integer.
+  An integer **n** where **1 <= n <= 10<sup>7</sup>**.
 
-### Output:
+  - **Output:**
 
-If **n** is magnanimous, print **1**. Otherwise, print **0**. The newline character does not affect the result.
-
-
-
-## 2. Jordan-Polya numbers
-
-A number that can be written as the **product of factorial numbers**.
-
-For example, **92160** is *Jordan-Polya* because the numbers because 
-
-**92160=(2!)<sup>7</sup>6!**
-
-### Input:
-
-A single integer **n** where **1<=n<=2<sup>31</sup>-1**. The input integer is guaranteed to be a valid integer.
-
-### Output:
-
-If **n** is Jordan-Polya, print **1**. Otherwise, print **0**. The newline character does not affect the result.
+  Whether **n** is a magnanimous number.
 
 
+### 2. Jordan-Polya number
 
-## 3. Alternating numbers
+  - **Definition:**
+  
+  A number that can be written as the product of factorial numbers.
 
-A number is said *alternating* in base **b** if in its representation odd and even digits alternate.
+  For example, **92160** is *Jordan-Polya* because 
 
-For example in base 10, **1, 2, 989, 1234543210...** are alternating numbers.
+  **92160 = (2!)<sup>7</sup> &times; 6!**
 
-In base 2, **1, 10, 101, 10101...**  are alternating numbers.
+  - **Input:**
 
-### Input:
+  An integer **n** where **1 <= n <= 10<sup>7</sup>**.
 
-A single integer **n** where **1<=n<=2<sup>31</sup>-1**. The input integer is guaranteed to be a valid integer.
+  - **Output:**
 
-### Output:
-
-If **n** is alternating, print **1**. Otherwise, print **0**. The newline character does not affect the result.
-
-
-
-## 4. Duffinian numbers
-
-So called by Richard Duffy who introduced them. A composite number  which is relatively prime to the sum of their divisors.
-
-For example, **35** is Duffinian since it's relatively prime to the sum of its divisors **1+3+5+7+35=48**.
-
-### Input:
-
-A single integer **n** where **1<=n<=2<sup>31</sup>-1**. The input integer is guaranteed to be a valid integer.
-
-### Output:
-
-If **n** is Duffinian, print **1**. Otherwise, print **0**. The newline character does not affect the result.
+  Whether **n** is a Jordan-Polya number.
 
 
+### 3. Alternating number
 
-## 5. Apocalyptic numbers*
+  - **Definition:**
+  
+  A number is said *alternating* in base **b** if in its representation odd and even digits alternate.
 
-A number of the form **2<sup>n</sup>** is called *Apocalyptic* if its digits contain "666" as a substring. For example, the smallest apocalyptic number is **2<sup>157</sup>**, which is equal to (in decimal) 
+  For example in base 10, **1**, **2**, **989**, **1234543210** are alternating numbers.
 
-182687704<u>**666**</u>362864775460604089535377456991567872​
+  In base 2, **1**, **10**, **101**, **10101**  are alternating numbers.
 
-A number **n** such that **2<sup>n</sup>** is apocalyptic is called *Apocalyptic power* or *Apocalyptic exponent*.
+  - **Input:**
 
-### Input:
+  An integer **n** where **1 <= n <= 10<sup>7</sup>**, and base **b**.
 
-A single integer **n** where **157<=n<=50000**. The input integer is guaranteed to be valid.
+  - **Output:**
 
-### Output:
+  Whether **n** is an alternating number in base **b**.
 
-If **2<sup>n</sup>** is apocalyptic, print **1**. Otherwise, print **0**. The newline character does not affect the result.
 
-### Hint:
+### 4. Duffinian number
 
-It's not hard to observe that the numbers we are dealing with exceed the range of `int` or even `long long int` type in C/C++. Therefore, the key point here is to store such a big number using C/C++.
+  - **Definition:**
+  
+  A composite number which is relatively prime to the sum of its divisors. So called by Richard Duffy who introduced it.
+
+  For example, **35** is Duffinian since it's relatively prime to the sum of its divisors **1 + 3 + 5 + 7 + 35 = 48**.
+
+  - **Input:**
+
+  An integer **n** where **1 <= n <= 10<sup>7</sup>**.
+
+  - **Output:**
+
+  Whether **n** is a Duffinian number.
+  
+
+### 5. Apocalyptic number*
+
+  - **Definition:**
+  
+  A number of the form **2<sup>n</sup>** is called *Apocalyptic* if its digits contain "666" as a substring. For example, the smallest apocalyptic number is **2<sup>157</sup>**, which is equal to 
+
+  182687704<u>**666**</u>362864775460604089535377456991567872​
+
+  A number **n** such that **2<sup>n</sup>** is apocalyptic is called *Apocalyptic power* or *Apocalyptic exponent*.
+
+  - **Input:**
+
+  An integer **n** where **1 <= n <= 50000**.
+
+  - **Output:**
+
+  Whether **2<sup>n</sup>** is an Apocalyptic number.
+
+
+  - **Hint:**
+
+  It's not hard to observe that the numbers we are dealing with exceed the range of `int` or even `long long int` type in C/C++. Therefore, the key point here is to store such a big number using C/C++.
 
 
 
