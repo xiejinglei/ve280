@@ -71,7 +71,7 @@
   
     A composite number which is relatively prime to the sum of its divisors. So called by Richard Duffy who introduced it.
 
-    For example, **35** is Duffinian since it's relatively prime to the sum of its divisors **1 + 3 + 5 + 7 + 35 = 48**.
+    For example, **35** is Duffinian since it's relatively prime to the sum of its divisors **1 + 5 + 7 + 35 = 48**.
 
   - **Input:**
 
