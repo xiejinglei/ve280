@@ -3,13 +3,6 @@
 
 using namespace std;
 
-bool is_alternating(int num, int base); 
-void test_alternating(); 
-
-int main(){
-    test_alternating();
-}
-
 bool is_alternating(int num, int base) {
 
     // convert to base b
