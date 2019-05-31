@@ -13,9 +13,8 @@ bool is_duffinian(int num) {
     int s = 0;
     int d = 1;
     while (d <= num) {
-        while (num % d != 0)
-            d++;
-        s += d;
+        if (num % d == 0) s += d;
+        d++;
     }
     return gcd(num, s) == 1;
 }
