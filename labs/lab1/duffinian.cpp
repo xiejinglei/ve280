@@ -3,13 +3,24 @@
 
 using namespace std;
 
+int gcd(int a, int b) {
+    if (b == 0)
+        return a;
+    return gcd(b, a % b);
+}
+
 bool is_duffinian(int num) {
-    // TODO: Your implementation here
-    return false;
+    int s = 0;
+    int d = 1;
+    while (d <= num) {
+        if (num % d == 0) s += d;
+        d++;
+    }
+    return gcd(num, s) == 1;
 }
 
 void test_duffinian() {
     assert(!is_duffinian(6));  // 6 is not a Duffinian number
-    // TODO: Add more test cases
+    assert(is_duffinian(35));
     cout << "Duffinian number tests passed!" << endl;
 }
