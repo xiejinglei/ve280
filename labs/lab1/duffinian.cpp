@@ -3,21 +3,25 @@
 
 using namespace std;
 
-int iter(int num, int odev, int base) {
-    if (num == 0)
-        return 1;
-    if (num % 2 == odev)
-        return 0;
-    return iter(num / base, 1 - odev, base);
+int gcd(int a, int b) {
+    if (b == 0)
+        return a;
+    return gcd(b, a % b);
 }
 
-bool is_alternating(int num, int base) {
-    return iter(num / base, num % 2, base);
+bool is_duffinian(int num) {
+    int s = 0;
+    int d = 1;
+    while (d <= num) {
+        while (num % d != 0)
+            d++;
+        s += d;
+    }
+    return gcd(num, s) == 1;
 }
 
-void test_alternating() {
-    assert(!is_alternating(24, 10));  // 24 is not an alternating number in base 10
-    assert(is_alternating(1, 10));
-    assert(is_alternating(212, 10));
-    cout << "Alternating number tests passed!" << endl;
+void test_duffinian() {
+    assert(!is_duffinian(6));  // 6 is not a Duffinian number
+    assert(is_duffinian(35));
+    cout << "Duffinian number tests passed!" << endl;
 }
