@@ -1,44 +1,35 @@
-#include <iostream>
-#include <cassert>
+#include "lab1.h"
 
-using namespace std;
-
-bool is_prime(int num) {
-    if (num < 2) {
-        return false;
-    }
-    if (num == 2) {
-        return true;
-    }
-    for (int i = 2; i * i <= num; i++) {
-        if (num % i == 0) {
-            return false;
-        }
-    }
-    return true;
-}
 
 bool is_magnanimous(int num) {
-    int num1 = num, dig = 0;
-    while (num1 > 0) {
-        dig++;
-        num1 = num1 / 10;
+    int prd, dec = 1;
+    bool flag = true;
+    string str = to_string(num);
+
+    for (int i = 1; i < str.length(); i++) {
+        dec = 1;
+        for (int j = 1; j <= i; j++) dec *= 10;
+        prd = (num / dec) + (num % dec);
+        if (!(is_prime(prd))) flag = false;
     }
-    // dig is the number of digits
-    int divisor = 10;
-    for (int i = 1; i < dig; i++) {
-        int a = 0, b = 0;
-        num1 = num;
-        a = num1 / divisor;
-        b = num1 % divisor;
-        int sum = a + b;
-        if (!is_prime(sum))
-            return false;
-        divisor *= 10;
-    }
-    return true;
+
+    return flag;  // Return a Boolean type
 }
 
+bool is_prime(int num){
+    if (num == 1) return false;
+
+    int fct = 2;
+    bool flag = true;
+    while (flag && (fct < num)) {
+        while (flag && ((num % fct) == 0)) {
+            flag = false;
+            num /= fct;
+        }
+        fct++;
+    }
+    return flag;
+}
 
 void test_magnanimous() {
     assert(!is_magnanimous(15));  // 15 is not a magnanimous number

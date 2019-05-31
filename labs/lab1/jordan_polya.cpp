@@ -1,22 +1,18 @@
-#include <iostream>
-#include <cassert>
-
-using namespace std;
-
-int factorial(int num) {
-    if (num == 1) return 1;
-    return (factorial(num - 1) * num);
-}
+#include "lab1.h"
 
 bool is_jordan_polya(int num) {
-    int n = 2;
+    int var = num, i = 2;
+    bool flag = false;
+
     if (num == 1) return true;
-    while (factorial(n) <= num) {
-        if (num % factorial(n) == 0 && is_jordan_polya(num / factorial(n)))
-            return true;
-        n++;
+
+    while ((var % i) == 0) {
+        var /= i;
+        i++;
+        flag |= is_jordan_polya(var);
     }
-    return false;
+
+    return flag;
 }
 
 void test_jordan_polya() {
