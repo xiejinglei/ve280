@@ -48,5 +48,3 @@ Programming &amp; Elem. Data Structures
 + Recitation Class: 
   + Wednesday 14:00 - 15:00 @ E2-305
   + Friday 12:30 - 13:30 @ E2-305
-  
-  - Edit
