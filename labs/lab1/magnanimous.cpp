@@ -19,17 +19,19 @@ bool is_prime(int num) {
 }
 
 bool is_magnanimous(int num) {
-    int num1=num,dig=0;
-    while (num1>0){dig++;num1=num1/10;}
-    // dig is the num of digits
+    int num1 = num, dig = 0;
+    while (num1 > 0) {
+        dig++;
+        num1 = num1 / 10;
+    }
+    // dig is the number of digits
     int divisor = 10;
-    for (int i=1;i<dig;i++){
-        cout << divisor << endl;
-        int a=0,b=0;
-        num1=num;
-        a = num1/divisor;
-        b = num1%divisor;
-        int sum=a+b;
+    for (int i = 1; i < dig; i++) {
+        int a = 0, b = 0;
+        num1 = num;
+        a = num1 / divisor;
+        b = num1 % divisor;
+        int sum = a + b;
         if (!is_prime(sum))
             return false;
         divisor *= 10;
@@ -38,10 +40,16 @@ bool is_magnanimous(int num) {
 }
 
 
-
-
 void test_magnanimous() {
     assert(!is_magnanimous(15));  // 15 is not a magnanimous number
-    // TODO: Add more test cases
+    assert(!is_magnanimous(10));
+    assert(is_magnanimous(11));
+    assert(is_magnanimous(12));
+    assert(is_magnanimous(20));
+    assert(!is_magnanimous(100));
+    assert(is_magnanimous(136));
+    assert(is_magnanimous(4001));
+    assert(is_magnanimous(9959374));
+    assert(!is_magnanimous(10000000));
     cout << "Magnanimous number tests passed!" << endl;
 }
