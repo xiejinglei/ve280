@@ -1,5 +1,5 @@
 # VE280
-Programming &amp; Elem. Data Structures
+### Programming &amp; Elem. Data Structures
 
 + Section 1
   + Instructor: Paul Weng 
