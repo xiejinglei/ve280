@@ -2,6 +2,7 @@
 
 
 bool is_magnanimous(int num) {
+    if (num < 10) return false;
     int prd, dec = 1;
     bool flag = true;
     string str = to_string(num);
