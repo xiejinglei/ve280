@@ -8,6 +8,8 @@ bool is_duffinian(int num) {
         if ((num % i) == 0) sum += i;
         i++;
     }
+    
+    if (sum <= num + 1) return false;
 
     int bg = (num > sum) ? num : sum,
         sm = (num > sum) ? sum : num,
