@@ -19,12 +19,12 @@ bool is_prime(int num) {
 }
 
 bool is_magnanimous(int num) {
+    if (num < 10) return false;
     int num1 = num, dig = 0;
     while (num1 > 0) {
         dig++;
         num1 = num1 / 10;
     }
-    // dig is the number of digits
     int divisor = 10;
     for (int i = 1; i < dig; i++) {
         int a = 0, b = 0;
@@ -32,8 +32,7 @@ bool is_magnanimous(int num) {
         a = num1 / divisor;
         b = num1 % divisor;
         int sum = a + b;
-        if (!is_prime(sum))
-            return false;
+        if (!is_prime(sum)) return false;
         divisor *= 10;
     }
     return true;
