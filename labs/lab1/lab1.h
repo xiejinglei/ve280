@@ -29,4 +29,11 @@ bool is_duffinian(int num);
 void test_duffinian();
 // EFFECTS: test the correctness of is_duffinian()
 
+bool is_apocalyptic(int num);
+// REQUIRES: 1 <= num <= 50000
+// EFFECTS: return true if 2^num is an apocalyptic number, otherwise return false
+
+void test_apocalyptic();
+// EFFECTS: test the correctness of is_apocalyptic()
+
 #endif
