@@ -1,5 +1,7 @@
 # Lab One: Integers!
 
+> This lab was completed on June 2, 2019, with joint solutions by VE280 students. You can obtain a copy of starter files [here](https://github.com/ve280/ve280/tree/92cd8c00feca0152cea3ecf22fdd906251454280/labs/lab1) by backtracking the commit history.
+
 ## Introduction
 
 ### 1. Magnanimous number
@@ -153,6 +155,10 @@ Then you can run the executable:
 
 ## Submission
 Please make a fork of the VE280 GitHub repository at <https://github.com/ve280/ve280>, then commit your updates to the files in `labs/lab1` and create a pull request. You can refer to this [tutorial](https://github.com/ve280/tutorials/blob/master/github_introduction.md#4-contribute-to-a-public-repository) on how to create pull requests.
+
+
+## Acknowledgement
+Lab 1 problems are designed by [Zian Ke](https://github.com/zianke) and [Tianyi Ge](https://github.com/TimothyGe).
 
 
 ## Reference
