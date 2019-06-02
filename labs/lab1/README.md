@@ -143,7 +143,7 @@ make
 or type the following command:
 
 ```
-g++ -Wall -o lab1 lab1.cpp magnanimous.cpp jordan_polya.cpp alternating.cpp duffinian.cpp
+g++ -Wall -o lab1 lab1.cpp magnanimous.cpp jordan_polya.cpp alternating.cpp duffinian.cpp apocalyptic.cpp
 ```
 
 Then you can run the executable:
