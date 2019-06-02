@@ -7,13 +7,13 @@ namespace TZTsai {
     bool is_alternating_helper(int num, int base, int is_odd) {
         if (num == 0)
             return true;
-        if (num % 2 == is_odd)
+        if ((num % base) % 2 == is_odd)
             return false;
         return is_alternating_helper(num / base, base, !is_odd);
     }
 
     bool is_alternating(int num, int base) {
-        return is_alternating_helper(num / base, base, num % 2);
+        return is_alternating_helper(num / base, base, (num % base) % 2);
     }
 }
 
