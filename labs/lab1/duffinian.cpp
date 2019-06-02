@@ -12,6 +12,7 @@ bool is_duffinian(int num) {
             divisors.push_back(i);
         }
     }
+    if (sum <= num + 1) return false;
     for (int i=1;i<divisors.size();i++){
         if(sum%divisors[i]==0)return false;
     }
