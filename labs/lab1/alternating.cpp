@@ -3,12 +3,10 @@
 
 using namespace std;
 
-int SameSign(int num1, int num2){
-	if(num1 % 2 == num2 % 2){return 1;}
-	else {return 0;}
+bool same_sign(int num1, int num2){
+	return (num1 % 2 == num2 % 2);
 }
 bool is_alternating(int num, int base) {
-    // TODO: Your implementation here
     int flag = 1;
     int b = base;
     while(num>0){
@@ -17,9 +15,7 @@ bool is_alternating(int num, int base) {
     num = num/b;
     if (num==0){break;}
     temp2 = num % b;
-    if (SameSign(temp1,temp2)){flag=0;}
-    else{continue;}
-
+    if (same_sign(temp1,temp2)){flag=0;}
     }
     return(flag==1);
 }
