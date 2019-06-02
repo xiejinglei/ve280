@@ -10,6 +10,7 @@ bool is_prime(int num){
     return true;
 }
 bool is_magnanimous(int num) {
+    if (num < 10) return false;
     for (int i=1;i<to_string(num).length();i++){
         if (!is_prime(num/(int)pow(10,i)+num%(int)pow(10,i)))return false;
     }
