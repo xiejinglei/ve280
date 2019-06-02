@@ -6,7 +6,7 @@ using namespace std;
 bool is_duffinian(int num) {
     int sum=0;
     vector<int>divisors;
-    for (int i=1;i<=num/2;i++){
+    for (int i=1;i<=num;i++){
         if (num%i==0){
             sum+=i;
             divisors.push_back(i);
