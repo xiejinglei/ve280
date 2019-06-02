@@ -16,7 +16,7 @@ void test_jordan_polya();
 // EFFECTS: test the correctness of is_jordan_polya()
 
 bool is_alternating(int num, int base);
-// REQUIRES: 1 <= num <= 10000000, 2 <= base <= 10
+// REQUIRES: 1 <= num <= 10000000, 2 <= base <= 16
 // EFFECTS: return true if num is an alternating number in the given base, otherwise return false
 
 void test_alternating();
