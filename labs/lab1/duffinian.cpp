@@ -10,7 +10,8 @@ bool is_duffinian(int num) {
         if (num % i == 0)
             sum_divisors += i;
     }
-
+    if (sum_divisors <= num + 1)
+        return false;
     for (int i = 2; i < min(sqrt(num), sqrt(sum_divisors)); ++i) {
         if (num % i == 0 && sum_divisors % i == 0)
             return false;
