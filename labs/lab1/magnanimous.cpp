@@ -18,20 +18,22 @@ bool is_prime(int num) {
     return true;
 }
 
-bool is_magnanimous(int num) {
-    if (num < 10) {
-        return false;
-    }
-    int quotient, remainder, divisor = 10;
-    while (num / divisor) {
-        quotient = num / divisor;
-        remainder = num % divisor;
-        if (!is_prime(quotient + remainder)) {
+namespace zianke {
+    bool is_magnanimous(int num) {
+        if (num < 10) {
             return false;
         }
-        divisor *= 10;
+        int quotient, remainder, divisor = 10;
+        while (num / divisor) {
+            quotient = num / divisor;
+            remainder = num % divisor;
+            if (!is_prime(quotient + remainder)) {
+                return false;
+            }
+            divisor *= 10;
+        }
+        return true;
     }
-    return true;
 }
 
 namespace LucasSkipper {
@@ -58,105 +60,105 @@ namespace LucasSkipper {
 
 
 void test_magnanimous() {
-    assert(!is_magnanimous(1));
-    assert(!is_magnanimous(2));
-    assert(!is_magnanimous(6));
-    assert(!is_magnanimous(10));
-    assert(is_magnanimous(11));
-    assert(is_magnanimous(12));
-    assert(!is_magnanimous(15));
-    assert(is_magnanimous(20));
-    assert(is_magnanimous(23));
-    assert(is_magnanimous(25));
-    assert(is_magnanimous(92));
-    assert(is_magnanimous(94));
-    assert(!is_magnanimous(100));
-    assert(is_magnanimous(116));
-    assert(is_magnanimous(136));
-    assert(is_magnanimous(152));
-    assert(is_magnanimous(209));
-    assert(is_magnanimous(221));
-    assert(is_magnanimous(229));
-    assert(is_magnanimous(316));
-    assert(is_magnanimous(358));
-    assert(is_magnanimous(407));
-    assert(is_magnanimous(443));
-    assert(is_magnanimous(467));
-    assert(is_magnanimous(536));
-    assert(is_magnanimous(538));
-    assert(is_magnanimous(601));
-    assert(is_magnanimous(607));
-    assert(is_magnanimous(790));
-    assert(is_magnanimous(845));
-    assert(is_magnanimous(938));
-    assert(is_magnanimous(994));
-    assert(is_magnanimous(1130));
-    assert(is_magnanimous(1910));
-    assert(is_magnanimous(2209));
-    assert(is_magnanimous(2267));
-    assert(is_magnanimous(3554));
-    assert(is_magnanimous(3730));
-    assert(is_magnanimous(4001));
-    assert(is_magnanimous(4463));
-    assert(is_magnanimous(4643));
-    assert(is_magnanimous(5516));
-    assert(is_magnanimous(6443));
-    assert(is_magnanimous(7330));
-    assert(is_magnanimous(7534));
-    assert(is_magnanimous(15938));
-    assert(is_magnanimous(22885));
-    assert(is_magnanimous(31370));
-    assert(is_magnanimous(40463));
-    assert(is_magnanimous(53756));
-    assert(is_magnanimous(60047));
-    assert(is_magnanimous(60667));
-    assert(is_magnanimous(66667));
-    assert(is_magnanimous(68003));
-    assert(is_magnanimous(71536));
-    assert(is_magnanimous(82825));
-    assert(is_magnanimous(82829));
-    assert(is_magnanimous(88229));
-    assert(is_magnanimous(222245));
-    assert(is_magnanimous(311156));
-    assert(is_magnanimous(351938));
-    assert(is_magnanimous(359794));
-    assert(is_magnanimous(408049));
-    assert(is_magnanimous(464447));
-    assert(is_magnanimous(773554));
-    assert(is_magnanimous(777776));
-    assert(is_magnanimous(800483));
-    assert(is_magnanimous(806483));
-    assert(is_magnanimous(822265));
-    assert(is_magnanimous(911390));
-    assert(is_magnanimous(975772));
-    assert(!is_magnanimous(1169295));
-    assert(!is_magnanimous(1207946));
-    assert(is_magnanimous(1533736));
-    assert(!is_magnanimous(1566969));
-    assert(!is_magnanimous(1590901));
-    assert(!is_magnanimous(1847920));
-    assert(is_magnanimous(2604067));
-    assert(!is_magnanimous(2728827));
-    assert(is_magnanimous(3155116));
-    assert(!is_magnanimous(3425897));
-    assert(is_magnanimous(3939118));
-    assert(!is_magnanimous(4859974));
-    assert(!is_magnanimous(4867712));
-    assert(!is_magnanimous(5172860));
-    assert(is_magnanimous(5551376));
-    assert(is_magnanimous(5731136));
-    assert(!is_magnanimous(5784879));
-    assert(!is_magnanimous(5983278));
-    assert(is_magnanimous(6600227));
-    assert(is_magnanimous(6824665));
-    assert(is_magnanimous(6864485));
-    assert(!is_magnanimous(6871313));
-    assert(!is_magnanimous(8024165));
-    assert(!is_magnanimous(8741190));
-    assert(!is_magnanimous(9152934));
-    assert(!is_magnanimous(9610622));
-    assert(!is_magnanimous(9730845));
-    assert(is_magnanimous(9959374));
-    assert(!is_magnanimous(10000000));
+    assert(!zianke::is_magnanimous(1));
+    assert(!LucasSkipper::is_magnanimous(2));
+    assert(!zianke::is_magnanimous(6));
+    assert(!LucasSkipper::is_magnanimous(10));
+    assert(zianke::is_magnanimous(11));
+    assert(LucasSkipper::is_magnanimous(12));
+    assert(!zianke::is_magnanimous(15));
+    assert(LucasSkipper::is_magnanimous(20));
+    assert(zianke::is_magnanimous(30));
+    assert(LucasSkipper::is_magnanimous(58));
+    assert(zianke::is_magnanimous(94));
+    assert(!LucasSkipper::is_magnanimous(100));
+    assert(zianke::is_magnanimous(136));
+    assert(LucasSkipper::is_magnanimous(170));
+    assert(zianke::is_magnanimous(221));
+    assert(LucasSkipper::is_magnanimous(227));
+    assert(zianke::is_magnanimous(245));
+    assert(LucasSkipper::is_magnanimous(398));
+    assert(zianke::is_magnanimous(536));
+    assert(LucasSkipper::is_magnanimous(592));
+    assert(zianke::is_magnanimous(710));
+    assert(LucasSkipper::is_magnanimous(958));
+    assert(zianke::is_magnanimous(1112));
+    assert(LucasSkipper::is_magnanimous(1990));
+    assert(zianke::is_magnanimous(2429));
+    assert(LucasSkipper::is_magnanimous(3370));
+    assert(zianke::is_magnanimous(3974));
+    assert(LucasSkipper::is_magnanimous(4001));
+    assert(zianke::is_magnanimous(4247));
+    assert(LucasSkipper::is_magnanimous(4427));
+    assert(zianke::is_magnanimous(5516));
+    assert(LucasSkipper::is_magnanimous(5558));
+    assert(zianke::is_magnanimous(5972));
+    assert(LucasSkipper::is_magnanimous(6001));
+    assert(zianke::is_magnanimous(6067));
+    assert(LucasSkipper::is_magnanimous(6425));
+    assert(zianke::is_magnanimous(6443));
+    assert(LucasSkipper::is_magnanimous(7394));
+    assert(zianke::is_magnanimous(7592));
+    assert(LucasSkipper::is_magnanimous(8029));
+    assert(zianke::is_magnanimous(9710));
+    assert(LucasSkipper::is_magnanimous(17716));
+    assert(zianke::is_magnanimous(24407));
+    assert(LucasSkipper::is_magnanimous(26201));
+    assert(zianke::is_magnanimous(28429));
+    assert(LucasSkipper::is_magnanimous(31756));
+    assert(zianke::is_magnanimous(35116));
+    assert(LucasSkipper::is_magnanimous(60007));
+    assert(zianke::is_magnanimous(60403));
+    assert(LucasSkipper::is_magnanimous(75374));
+    assert(zianke::is_magnanimous(79370));
+    assert(LucasSkipper::is_magnanimous(84265));
+    assert(zianke::is_magnanimous(88621));
+    assert(LucasSkipper::is_magnanimous(111112));
+    assert(zianke::is_magnanimous(115772));
+    assert(LucasSkipper::is_magnanimous(117116));
+    assert(zianke::is_magnanimous(193910));
+    assert(LucasSkipper::is_magnanimous(220021));
+    assert(!zianke::is_magnanimous(290363));
+    assert(!LucasSkipper::is_magnanimous(318364));
+    assert(zianke::is_magnanimous(371116));
+    assert(!LucasSkipper::is_magnanimous(431125));
+    assert(zianke::is_magnanimous(559952));
+    assert(LucasSkipper::is_magnanimous(595598));
+    assert(!zianke::is_magnanimous(618477));
+    assert(LucasSkipper::is_magnanimous(628601));
+    assert(zianke::is_magnanimous(806483));
+    assert(LucasSkipper::is_magnanimous(911518));
+    assert(zianke::is_magnanimous(979592));
+    assert(!LucasSkipper::is_magnanimous(1046623));
+    assert(!zianke::is_magnanimous(1555011));
+    assert(LucasSkipper::is_magnanimous(2008829));
+    assert(!zianke::is_magnanimous(2139564));
+    assert(!LucasSkipper::is_magnanimous(2650268));
+    assert(!zianke::is_magnanimous(2728776));
+    assert(LucasSkipper::is_magnanimous(2828809));
+    assert(!zianke::is_magnanimous(3744093));
+    assert(LucasSkipper::is_magnanimous(4000483));
+    assert(!zianke::is_magnanimous(4075891));
+    assert(LucasSkipper::is_magnanimous(4408603));
+    assert(zianke::is_magnanimous(4468865));
+    assert(!LucasSkipper::is_magnanimous(5012764));
+    assert(zianke::is_magnanimous(5115736));
+    assert(!LucasSkipper::is_magnanimous(5178699));
+    assert(zianke::is_magnanimous(5357776));
+    assert(!LucasSkipper::is_magnanimous(5692622));
+    assert(!zianke::is_magnanimous(6068981));
+    assert(!LucasSkipper::is_magnanimous(6298881));
+    assert(zianke::is_magnanimous(6640063));
+    assert(LucasSkipper::is_magnanimous(6866683));
+    assert(zianke::is_magnanimous(7139390));
+    assert(LucasSkipper::is_magnanimous(7351376));
+    assert(!zianke::is_magnanimous(7467701));
+    assert(!LucasSkipper::is_magnanimous(7768620));
+    assert(!zianke::is_magnanimous(7859754));
+    assert(!LucasSkipper::is_magnanimous(8117680));
+    assert(!zianke::is_magnanimous(8723057));
+    assert(!LucasSkipper::is_magnanimous(9555091));
+    assert(zianke::is_magnanimous(9959374));
+    assert(!LucasSkipper::is_magnanimous(10000000));
     cout << "Magnanimous number tests passed!" << endl;
 }

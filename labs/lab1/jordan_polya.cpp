@@ -3,19 +3,21 @@
 
 using namespace std;
 
-bool is_jordan_polya(int num) {
-    if (num == 1) {
-        return true;
-    } else {
-        int i = 2;
-        int factorial = i;
-        while (factorial <= num) {
-            if (num % factorial == 0 && is_jordan_polya(num / factorial)) {
-                return true;
+namespace zianke {
+    bool is_jordan_polya(int num) {
+        if (num == 1) {
+            return true;
+        } else {
+            int i = 2;
+            int factorial = i;
+            while (factorial <= num) {
+                if (num % factorial == 0 && is_jordan_polya(num / factorial)) {
+                    return true;
+                }
+                factorial *= ++i;
             }
-            factorial *= ++i;
+            return false;
         }
-        return false;
     }
 }
 
@@ -38,104 +40,105 @@ namespace wangsoap {
 }
 
 void test_jordan_polya() {
-    assert(is_jordan_polya(1));
-    assert(is_jordan_polya(2));
-    assert(is_jordan_polya(4));
-    assert(!is_jordan_polya(5));
-    assert(is_jordan_polya(16));
-    assert(!is_jordan_polya(60));
-    assert(is_jordan_polya(72));
-    assert(is_jordan_polya(120));
-    assert(is_jordan_polya(128));
-    assert(is_jordan_polya(240));
-    assert(is_jordan_polya(256));
-    assert(is_jordan_polya(1296));
-    assert(is_jordan_polya(1440));
-    assert(is_jordan_polya(2048));
-    assert(is_jordan_polya(2880));
-    assert(is_jordan_polya(4096));
-    assert(is_jordan_polya(5184));
-    assert(is_jordan_polya(5760));
-    assert(is_jordan_polya(7680));
-    assert(is_jordan_polya(7776));
-    assert(is_jordan_polya(11520));
-    assert(is_jordan_polya(13824));
-    assert(is_jordan_polya(16384));
-    assert(is_jordan_polya(18432));
-    assert(is_jordan_polya(27648));
-    assert(is_jordan_polya(30720));
-    assert(is_jordan_polya(36864));
-    assert(is_jordan_polya(40320));
-    assert(is_jordan_polya(49152));
-    assert(is_jordan_polya(51840));
-    assert(is_jordan_polya(62208));
-    assert(is_jordan_polya(65536));
-    assert(is_jordan_polya(86400));
-    assert(is_jordan_polya(92160));
-    assert(is_jordan_polya(131072));
-    assert(is_jordan_polya(155520));
-    assert(is_jordan_polya(161280));
-    assert(is_jordan_polya(221184));
-    assert(is_jordan_polya(230400));
-    assert(is_jordan_polya(279936));
-    assert(is_jordan_polya(294912));
-    assert(is_jordan_polya(311040));
-    assert(is_jordan_polya(322560));
-    assert(is_jordan_polya(331776));
-    assert(is_jordan_polya(491520));
-    assert(is_jordan_polya(518400));
-    assert(!is_jordan_polya(611116));
-    assert(is_jordan_polya(663552));
-    assert(is_jordan_polya(725760));
-    assert(is_jordan_polya(786432));
-    assert(is_jordan_polya(921600));
-    assert(is_jordan_polya(933120));
-    assert(!is_jordan_polya(986501));
-    assert(is_jordan_polya(1036800));
-    assert(is_jordan_polya(1088640));
-    assert(is_jordan_polya(1209600));
-    assert(is_jordan_polya(1327104));
-    assert(is_jordan_polya(1382400));
-    assert(is_jordan_polya(1572864));
-    assert(!is_jordan_polya(1862799));
-    assert(is_jordan_polya(1866240));
-    assert(is_jordan_polya(1990656));
-    assert(is_jordan_polya(2949120));
-    assert(!is_jordan_polya(3081048));
-    assert(is_jordan_polya(3110400));
-    assert(!is_jordan_polya(3141279));
-    assert(!is_jordan_polya(3216500));
-    assert(is_jordan_polya(3456000));
-    assert(is_jordan_polya(3628800));
-    assert(is_jordan_polya(4194304));
-    assert(is_jordan_polya(4354560));
-    assert(is_jordan_polya(4423680));
-    assert(is_jordan_polya(4718592));
-    assert(is_jordan_polya(5308416));
-    assert(is_jordan_polya(5598720));
-    assert(!is_jordan_polya(5669324));
-    assert(!is_jordan_polya(5754817));
-    assert(!is_jordan_polya(5770139));
-    assert(is_jordan_polya(5898240));
-    assert(!is_jordan_polya(5921694));
-    assert(!is_jordan_polya(5942166));
-    assert(is_jordan_polya(5971968));
-    assert(!is_jordan_polya(6058700));
-    assert(!is_jordan_polya(6525492));
-    assert(!is_jordan_polya(6834583));
-    assert(!is_jordan_polya(7255503));
-    assert(!is_jordan_polya(7409119));
-    assert(is_jordan_polya(7464960));
-    assert(!is_jordan_polya(7670127));
-    assert(is_jordan_polya(7962624));
-    assert(!is_jordan_polya(7971438));
-    assert(!is_jordan_polya(8293294));
-    assert(is_jordan_polya(8294400));
-    assert(is_jordan_polya(8388608));
-    assert(!is_jordan_polya(8439436));
-    assert(!is_jordan_polya(9085255));
-    assert(!is_jordan_polya(9282930));
-    assert(is_jordan_polya(9953280));
-    assert(!is_jordan_polya(9996573));
+    assert(zianke::is_jordan_polya(1));
+    assert(wangsoap::is_jordan_polya(2));
+    assert(zianke::is_jordan_polya(4));
+    assert(!wangsoap::is_jordan_polya(5));
+    assert(zianke::is_jordan_polya(6));
+    assert(wangsoap::is_jordan_polya(24));
+    assert(zianke::is_jordan_polya(48));
+    assert(!wangsoap::is_jordan_polya(60));
+    assert(zianke::is_jordan_polya(72));
+    assert(wangsoap::is_jordan_polya(120));
+    assert(zianke::is_jordan_polya(144));
+    assert(wangsoap::is_jordan_polya(256));
+    assert(zianke::is_jordan_polya(480));
+    assert(wangsoap::is_jordan_polya(512));
+    assert(zianke::is_jordan_polya(576));
+    assert(wangsoap::is_jordan_polya(960));
+    assert(zianke::is_jordan_polya(1152));
+    assert(wangsoap::is_jordan_polya(1536));
+    assert(zianke::is_jordan_polya(1920));
+    assert(wangsoap::is_jordan_polya(4096));
+    assert(zianke::is_jordan_polya(5184));
+    assert(wangsoap::is_jordan_polya(11520));
+    assert(zianke::is_jordan_polya(12288));
+    assert(wangsoap::is_jordan_polya(20736));
+    assert(zianke::is_jordan_polya(24576));
+    assert(wangsoap::is_jordan_polya(25920));
+    assert(zianke::is_jordan_polya(30240));
+    assert(wangsoap::is_jordan_polya(30720));
+    assert(zianke::is_jordan_polya(32768));
+    assert(wangsoap::is_jordan_polya(57600));
+    assert(zianke::is_jordan_polya(61440));
+    assert(wangsoap::is_jordan_polya(62208));
+    assert(zianke::is_jordan_polya(65536));
+    assert(wangsoap::is_jordan_polya(73728));
+    assert(zianke::is_jordan_polya(92160));
+    assert(wangsoap::is_jordan_polya(93312));
+    assert(zianke::is_jordan_polya(122880));
+    assert(!wangsoap::is_jordan_polya(165129));
+    assert(zianke::is_jordan_polya(184320));
+    assert(wangsoap::is_jordan_polya(230400));
+    assert(zianke::is_jordan_polya(276480));
+    assert(wangsoap::is_jordan_polya(279936));
+    assert(zianke::is_jordan_polya(294912));
+    assert(wangsoap::is_jordan_polya(322560));
+    assert(zianke::is_jordan_polya(345600));
+    assert(!wangsoap::is_jordan_polya(489657));
+    assert(zianke::is_jordan_polya(497664));
+    assert(wangsoap::is_jordan_polya(518400));
+    assert(!zianke::is_jordan_polya(533884));
+    assert(wangsoap::is_jordan_polya(589824));
+    assert(zianke::is_jordan_polya(604800));
+    assert(wangsoap::is_jordan_polya(663552));
+    assert(zianke::is_jordan_polya(725760));
+    assert(wangsoap::is_jordan_polya(746496));
+    assert(!zianke::is_jordan_polya(781564));
+    assert(wangsoap::is_jordan_polya(884736));
+    assert(zianke::is_jordan_polya(921600));
+    assert(wangsoap::is_jordan_polya(933120));
+    assert(zianke::is_jordan_polya(967680));
+    assert(wangsoap::is_jordan_polya(983040));
+    assert(zianke::is_jordan_polya(1088640));
+    assert(wangsoap::is_jordan_polya(1119744));
+    assert(zianke::is_jordan_polya(1209600));
+    assert(wangsoap::is_jordan_polya(1244160));
+    assert(zianke::is_jordan_polya(1290240));
+    assert(wangsoap::is_jordan_polya(1382400));
+    assert(zianke::is_jordan_polya(1658880));
+    assert(wangsoap::is_jordan_polya(1679616));
+    assert(zianke::is_jordan_polya(1935360));
+    assert(wangsoap::is_jordan_polya(1966080));
+    assert(!zianke::is_jordan_polya(2088701));
+    assert(!wangsoap::is_jordan_polya(2364175));
+    assert(!zianke::is_jordan_polya(2419424));
+    assert(!wangsoap::is_jordan_polya(2427103));
+    assert(zianke::is_jordan_polya(2488320));
+    assert(!wangsoap::is_jordan_polya(2500689));
+    assert(!zianke::is_jordan_polya(2612670));
+    assert(!wangsoap::is_jordan_polya(2711799));
+    assert(!zianke::is_jordan_polya(2889131));
+    assert(wangsoap::is_jordan_polya(2949120));
+    assert(!zianke::is_jordan_polya(3284085));
+    assert(wangsoap::is_jordan_polya(3456000));
+    assert(!zianke::is_jordan_polya(3789614));
+    assert(!wangsoap::is_jordan_polya(3998740));
+    assert(zianke::is_jordan_polya(4423680));
+    assert(wangsoap::is_jordan_polya(4976640));
+    assert(!zianke::is_jordan_polya(5539397));
+    assert(wangsoap::is_jordan_polya(5806080));
+    assert(zianke::is_jordan_polya(6291456));
+    assert(!wangsoap::is_jordan_polya(6340713));
+    assert(zianke::is_jordan_polya(6635520));
+    assert(!wangsoap::is_jordan_polya(6713244));
+    assert(!zianke::is_jordan_polya(6837321));
+    assert(!wangsoap::is_jordan_polya(7353895));
+    assert(!zianke::is_jordan_polya(7791375));
+    assert(!wangsoap::is_jordan_polya(8091183));
+    assert(!zianke::is_jordan_polya(8591851));
+    assert(wangsoap::is_jordan_polya(9676800));
+    assert(zianke::is_jordan_polya(9953280));
+    assert(!wangsoap::is_jordan_polya(10000000));
     cout << "Jordan-Polya number tests passed!" << endl;
 }
