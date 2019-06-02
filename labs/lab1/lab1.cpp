@@ -1,11 +1,5 @@
 #include <iostream>
-#include <cmath>
-#include <string>
-#include <cstdlib>
-#include <cassert>
 #include "lab1.h"
-
-using namespace std;
 
 int main() {
     test_magnanimous();
@@ -13,7 +7,5 @@ int main() {
     test_alternating();
     test_duffinian();
     test_apocalyptic();
-
     return 0;
 }
-
