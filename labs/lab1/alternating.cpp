@@ -15,6 +15,7 @@ bool is_alternating(int num, int base) {
     int temp1, temp2;	
     temp1 = num % b;
     num = num/b;
+    if (num==0){break;}
     temp2 = num % b;
     if (SameSign(temp1,temp2)){flag=0;}
     else{continue;}
