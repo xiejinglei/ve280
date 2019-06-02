@@ -2,7 +2,7 @@
 #include <vector>
 
 
-bool is_apocalypse(int num) {
+bool is_apocalyptic(int num) {
     vector<int> vec(1,1);
 
     for (int i = 1; i <= num; i++) {
@@ -30,14 +30,14 @@ bool is_apocalypse(int num) {
 
 }
 
-void test_apocalypse() {
-    assert(!is_apocalypse(1));
-    assert(is_apocalypse(157));
-    assert(!is_apocalypse(200));
-    assert(is_apocalypse(220));
-    assert(is_apocalypse(931));
-    assert(!is_apocalypse(1700));
-    assert(is_apocalypse(1701));
+void test_apocalyptic() {
+    assert(!is_apocalyptic(1));
+    assert(is_apocalyptic(157));
+    assert(!is_apocalyptic(200));
+    assert(is_apocalyptic(220));
+    assert(is_apocalyptic(931));
+    assert(!is_apocalyptic(1700));
+    assert(is_apocalyptic(1701));
     // TODO: Add more test cases
-    cout << "Apocalypse number tests passed!" << endl;
+    cout << "Apocalyptic number tests passed!" << endl;
 }

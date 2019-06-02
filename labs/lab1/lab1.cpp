@@ -12,7 +12,7 @@ int main() {
     test_jordan_polya();
     test_alternating();
     test_duffinian();
-    test_apocalypse();
+    test_apocalyptic();
 
     return 0;
 }

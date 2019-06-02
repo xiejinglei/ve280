@@ -23,7 +23,7 @@ void test_alternating();
 bool is_duffinian(int num);
 void test_duffinian();
 
-bool is_apocalypse(int num);
-void test_apocalypse();
+bool is_apocalyptic(int num);
+void test_apocalyptic();
 
 #endif //LAB01_HEADER_H
