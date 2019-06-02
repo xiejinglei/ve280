@@ -13,7 +13,6 @@ bool is_alternating(int num, int base) {
     int b = base;
     while(num>0){
     int temp1, temp2;	
-    num /= b;    
     temp1 = num % b;
     num = num/b;
     temp2 = num % b;
