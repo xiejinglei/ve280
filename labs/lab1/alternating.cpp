@@ -9,7 +9,7 @@ int SameSign(int num1, int num2){
 }
 bool is_alternating(int num, int base) {
     // TODO: Your implementation here
-    int flag = 0;
+    int flag = 1;
     int b = base;
     while(num>0){
     int temp1, temp2;	
@@ -17,13 +17,11 @@ bool is_alternating(int num, int base) {
     temp1 = num % b;
     num = num/b;
     temp2 = num % b;
-    if (!SameSign(temp1,temp2)){flag=1;}
+    if (SameSign(temp1,temp2)){flag=0;}
     else{continue;}
 
     }
-    if(flag==1){cout << "is alternative" << endl;}
-    else {cout << "not alternative"<<endl;}
-	return false;
+    return(flag==1);
 }
 
 void test_alternating() {
