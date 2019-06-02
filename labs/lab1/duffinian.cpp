@@ -16,7 +16,7 @@ bool is_duffinian(int num) {
         if (num % d == 0) s += d;
         d++;
     }
-    return gcd(num, s) == 1;
+    return s > num + 1 && gcd(num, s) == 1;
 }
 
 void test_duffinian() {
