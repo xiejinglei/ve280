@@ -50,7 +50,7 @@ void test_alternating() {
     assert(!TZTsai::is_alternating(4529, 8));
     assert(MxMoss3::is_alternating(1725654, 16));
     assert(!TZTsai::is_alternating(1529046, 16));
-    assert(!MxMoss3::is_alternating(1197056, 15));
+    assert(MxMoss3::is_alternating(1197057, 15));
     assert(TZTsai::is_alternating(1, 10));
     assert(MxMoss3::is_alternating(16, 10));
     assert(TZTsai::is_alternating(21, 10));
