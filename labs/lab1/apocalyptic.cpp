@@ -65,19 +65,18 @@ namespace TimothyGe {
 
 void test_apocalyptic() {
     assert(!item084::is_apocalyptic(1));
+    assert(!TimothyGe::is_apocalyptic(1));
     assert(item084::is_apocalyptic(157));
-    assert(!item084::is_apocalyptic(200));
-    assert(item084::is_apocalyptic(220));
-    assert(item084::is_apocalyptic(931));
-    assert(!item084::is_apocalyptic(1700));
-    assert(item084::is_apocalyptic(1701));
-	
-	assert(!TimothyGe::is_apocalyptic(1));
     assert(TimothyGe::is_apocalyptic(157));
+    assert(!item084::is_apocalyptic(200));
     assert(!TimothyGe::is_apocalyptic(200));
+    assert(item084::is_apocalyptic(220));
     assert(TimothyGe::is_apocalyptic(220));
+    assert(item084::is_apocalyptic(931));
     assert(TimothyGe::is_apocalyptic(931));
+    assert(!item084::is_apocalyptic(1700));
     assert(!TimothyGe::is_apocalyptic(1700));
+    assert(item084::is_apocalyptic(1701));
     assert(TimothyGe::is_apocalyptic(1701));
     cout << "Apocalyptic number tests passed!" << endl;
 }

@@ -60,7 +60,7 @@
 
   - **Input:**
 
-    An integer **n** where **1 <= n <= 10<sup>7</sup>**, and base **b**.
+    An integer **n** and base **b** where **1 <= n <= 10<sup>7</sup>** and **2 <= b <= 16**.
 
   - **Output:**
 
@@ -110,7 +110,7 @@
 
 ## Implementation
 
-For the RC section on May 30, you need to complete `magnanimous.cpp` and `jordan_polya.cpp`. For the RC section on May 31, you need to complete `alternating.cpp` and `duffinian.cpp`. 
+For the lab section on May 30, you need to complete `magnanimous.cpp` and `jordan_polya.cpp`. For the lab section on May 31, you need to complete `alternating.cpp` and `duffinian.cpp`. Additionally, you can try to solve the bonus problem in `apocalyptic.cpp` if interested.
 
 The function declarations are provided for each kind of number. For example, you need to implement `is_magnanimous()` in `magnanimous.cpp` to check magnanimous numbers. 
 
