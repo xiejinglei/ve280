@@ -1,4 +1,4 @@
-# Lab One: Integers!
+# Lab One: Integers
 
 > This lab was completed on June 2, 2019, with joint solutions by VE280 students. You can obtain a copy of starter files [here](https://github.com/ve280/ve280/tree/92cd8c00feca0152cea3ecf22fdd906251454280/labs/lab1) by backtracking the commit history.
 
