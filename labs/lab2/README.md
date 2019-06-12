@@ -21,7 +21,7 @@ A valid cord must be either `nullptr`, a leaf, or a non-leaf. More specifically:
 
 - A cord is a leaf if it is non-`nullptr`, has a non-empty string data field, has `left` and `right` fields that are both `nullptr`, and has a strictly positive `len` equal to the length of the string in the `data` field.
 
-- A cord is a non-leaf if it has non-`nullptr` left and right fields, both of which are valid cords, and if it has a `len` field equal to the sum of the `len` fields of its children. The `data` field of a non-leaf is unspecified. We’ll call these non-leaves *concatenation nodes*.
+- A cord is a non-leaf if it has non-`nullptr` left and right fields, both of which are valid cords, and if it has a `len` field equal to the sum of the `len` fields of its children. The `data` field of a non-leaf is unspecified, but for now we set it as the empty string for simplicity. We’ll call these non-leaves *concatenation nodes*.
 
 Following is a cord example that represents the 15-character string `"happy birthday!"`:
 
