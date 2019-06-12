@@ -63,7 +63,7 @@ This lab aims to help you better understand recursion. Therefore, we have provid
    
 5. `std::string cord_tostring(cord_t R);`
 
-   Return the string that a given cord represents.
+   Return the string represented by a given cord.
    
 6. `char cord_charat(cord_t R, size_t i);`
 
