@@ -75,7 +75,7 @@ This lab aims to help you better understand recursion. Therefore, we have provid
    
    The function should not change the structure of the original cord in any way, while also maximizing sharing between the old cord and the new cord and only allocating a new node when it is impossible to use the entire string represented by an existing cord.
    
-   Here are some examples, where we have R as the cord representing `"totallyefficient"` as defined in function 4.
+   Here are some examples, where we have R as the cord representing `"totallyefficient"` as defined in function 4 example.
    
    - After running `cord_t R3 = cord_sub(R, 1, 16);`
 
